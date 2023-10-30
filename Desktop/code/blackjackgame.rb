@@ -197,25 +197,58 @@ p4.cost = gets.chomp.to_i
 puts 'ノーモアベット'
 
 # 2枚ずつ配られる
-2.times do
+2.times do |counts|
   p1.player_draw(deck)
+  puts "#{counts + 1}枚目のカードが配られました。"
+end
+puts 'プレーヤー１さんのカードが配られました。'
+puts 'プレーヤー１さんは、サレンダーしますか？　（Y/N）'
+p1_surrender = gets.chomp
+if p1_surrender == 'Y'
+  p1.cost = p1.cost / 2
+  puts '降参しました。'
 end
 
-2.times do
+2.times do |counts|
   p2.player_draw(deck)
+  puts "#{counts + 1}枚目のカードが配られました。"
+end
+puts 'プレーヤー２さんのカードが配られました。'
+puts 'プレーヤー２さんは、サレンダーしますか？'
+p2_surrender = gets.chomp
+if p2_surrender == 'Y'
+  p2.cost = p2.cost / 2
+  puts '降参しました。'
 end
 
-2.times do
+2.times do |counts|
   p3.player_draw(deck)
+  puts "#{counts + 1}枚目のカードが配られました。"
+end
+puts 'プレーヤー３さんのカードが配られました。'
+puts 'プレーヤー３さんは、サレンダーしますか？'
+p3_surrender = gets.chomp
+if p3_surrender == 'Y'
+  p3.cost = p3.cost / 2
+  puts '降参しました。'
 end
 
-2.times do
+2.times do |counts|
   p4.player_draw(deck)
+  puts "#{counts + 1}枚目のカードが配られました。"
+end
+puts 'プレーヤー４さんのカードが配られました。'
+puts 'プレーヤー４さんは、サレンダーしますか？'
+p4_surrender = gets.chomp
+if p4_surrender == 'Y'
+  p4.cost = p4_0.cost / 2
+  puts '降参しました。'
 end
 
 2.times do
   d.dealer_draw(deck)
 end
+puts 'ディーラーのカードが配られました。'
 
 puts "ディーラーの引いたカードは#{d.dealer[0][0]}の#{d.dealer[0][1]}です。"
 
