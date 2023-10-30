@@ -206,6 +206,7 @@ puts 'プレーヤー１さんは、サレンダーしますか？　（Y/N）'
 p1_surrender = gets.chomp
 if p1_surrender == 'Y'
   p1.cost = p1.cost / 2
+  p1_0 = 'end'
   puts '降参しました。'
 end
 
@@ -218,6 +219,7 @@ puts 'プレーヤー２さんは、サレンダーしますか？'
 p2_surrender = gets.chomp
 if p2_surrender == 'Y'
   p2.cost = p2.cost / 2
+  p2_0 = 'end'
   puts '降参しました。'
 end
 
@@ -230,6 +232,7 @@ puts 'プレーヤー３さんは、サレンダーしますか？'
 p3_surrender = gets.chomp
 if p3_surrender == 'Y'
   p3.cost = p3.cost / 2
+  p3_0 = 'end'
   puts '降参しました。'
 end
 
@@ -242,6 +245,7 @@ puts 'プレーヤー４さんは、サレンダーしますか？'
 p4_surrender = gets.chomp
 if p4_surrender == 'Y'
   p4.cost = p4_0.cost / 2
+  p4_0 = 'end'
   puts '降参しました。'
 end
 
